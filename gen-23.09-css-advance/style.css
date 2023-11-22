@@ -1,0 +1,205 @@
+header{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .search_bar{
+    display: flex;
+    align-items: center;
+}
+
+header .search_bar input{
+    padding: 5px;
+    border-radius: 10px;
+    float: left;
+    width: 400px;
+    height: 19px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav select{
+    background-color: orange;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 550;
+    font-size: 15px;
+}
+
+header nav a{
+    font-weight: 550;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+header nav a:hover{
+    color: orange;
+}
+
+header nav a:active {
+    color: blue;
+  }
+
+h3{
+    margin-top: 100px;
+    font-weight: 550;
+    font-size: 19px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.category div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 550;
+
+    /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
+    transition: transform 0.7s ease-in-out;
+}
+
+.category div:hover{
+    box-shadow: 5px 5px 50px orange;
+    transform: scale(1.5);
+}
+
+.deals{
+    display: flex;
+    justify-content: space-around;
+}
+
+.deals section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: 550;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card .front, .card .back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    width: 200px;
+    backface-visibility: hidden;
+}
+
+.card .front{
+    background-size:200px;
+}
+
+.card .back{
+    background-size:200px;
+    transform: rotateY(180deg);
+    background-repeat: round;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.trending{
+    display: flex;
+    justify-content: space-around;
+}
+
+.trending section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: 550;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mens_footwear{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mens_footwear section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: 550;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 200px;
+
+    background-color: orange;
+    height: 300px;
+
+    font-weight: 550;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.deals button, .trending button, .mens_footwear button{
+    border: none;
+    font-weight: bold;
+    width: 90px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: orange;
+    margin-top: 7px;
+}
+
+.deals button:hover, .trending button:hover, .mens_footwear button:hover {
+    background-color: rgb(179, 137, 60)
+}
+
+.deals button:active, .trending button:active, .mens_footwear button:active{
+    background-color: rgb(255, 215, 139);
+  }
+
+.deals .discount, .trending .discount, .mens_footwear .discount{
+    font-weight: bold;
+    color: rgb(21, 180, 58);
+}
