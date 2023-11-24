@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-size{
+    @apply border-solid border-2 border-gray-200 p-1 font-semibold w-8 hover:border-solid hover:border-2 hover:border-gray-500
+}
