@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website E-commerce</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="javascript/eksternal.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="icons/logo.png" width="60px">
+                <h4>E-Commerce</h4>
+            </div>
+            <div class="search_bar">
+                <input type="text" placeholder="I am Searching For...">
+                <button><img src="icons/search.png" width="24px"></button>
+            </div>
+            <nav>
+                <div>
+                    <img src="icons/user.png" width="30px">
+                    <a class='user' href="#">Login </a>
+                </div>
+                <div>
+                    <img src="icons/cart.png" width="30px">
+                    <a class='cart' href="#">Cart </a>
+                </div>
+                <div>
+                    <select>
+                        <option value="">More</option>
+                        <option value="">More1</option>
+                        <option value="">More2</option>
+                    </select>
+                </div>
+                
+            </nav>
+        </header>
+        <div class="image">
+            <img src="icons/clothing.png" width="100%">
+        </div>
+        <h3>Browse By Categories</h3>
+        <nav class="category">
+            <div>
+                <img  src="icons/mens.png" width="100px">
+                <figcaption>
+                    Mens Wear
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/womens.png" width="100px">
+                <figcaption>
+                    Womens Wear
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/kids.png" width="100px">
+                <figcaption>
+                    Kids Wear
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/electronics.png" width="100px">
+                <figcaption>
+                    Electronic
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/home.png" width="100px">
+                <figcaption>
+                    Home Appiliance
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/mobiles.png" width="100px">
+                <figcaption>
+                    Mobiles
+                </figcaption>
+            </div>
+            <div>
+                <img  src="icons/beauty.png" width="100px">
+                <figcaption>
+                    Beauty Products
+                </figcaption>
+            </div>
+        </nav>
+        <h3>Deals Of the Day</h3>
+        <div class="deals">
+            <section onclick="myFunction1()">
+                <div class="container" id="container1">
+                    <div class="card">
+                        <img class="front" src="img/tshirt-front.jpg">
+                        <img class="back" src="img/tshirt-back.png">
+                    </div>
+                </div>
+                <figcaption id="namaProduct1">
+                    New Black T-Shirt Seven Zero Five Vol-II
+                </figcaption>
+                <figcaption class="harga" id="harga1">
+                    Rp. 200.000
+                </figcaption>
+                <figcaption hidden id="desciption1">
+                    Dibuat dengan menggunakan campuran katun berkualitas tinggi dan serat polyester, kaos ini tidak hanya lembut di kulit, tetapi juga memberikan daya tahan ekstra. Bahan ini juga memberikan sirkulasi udara yang baik, menjadikannya pilihan ideal untuk aktivitas sehari-hari atau saat berada di kota.
+                </figcaption>
+                <ul id="list1" hidden>
+                    <li>Kaos nuansa dark tone untuk daily look yang klasik</li>
+                    <li>Warna hitam </li>
+                    <li>Unlined</li>
+                    <li>Regular fit</li>
+                    <li>Material katun tidak transparan, ringan, dan tidak stretch</li>
+                </ul>
+                <button>Shop Now</button>
+            </section>
+            <section onclick="myFunction2()">
+                <div class="container" id="container2">
+                    <div class="card">
+                        <img class="front" src="img/monseur-front.jpeg">
+                        <img class="back" src="img/monseur-back.jpeg">
+                    </div>
+                </div>
+                <figcaption id="namaProduct2">
+                    The Monseur Gallery T-shirt
+                </figcaption>
+                <figcaption class="harga" id="harga2">
+                    Rp. 100.000
+                </figcaption>
+                <figcaption hidden id="desciption2">
+                    THE MONSEUR GALLERY (TMG) adalah merek desain independen yang berkomitmen pada desain dan pengembangan kelompok muda. Sambil membantu konsumen untuk lebih membentuk citra kepribadian mode, itu menyampaikan sikap tren anak muda yang beragam, tidak membabi buta mengikuti, dan aktif dan mandiri, menunjukkan tren mode yang menarik dan avant-garde.
+                </figcaption>
+                <ul id="list2" hidden>
+                    <li>Basic, Korean, Retro, Street Style</li>
+                    <li>Lengan Pendek</li>
+                    <li>Katun</li>
+                    <li>Regular</li>
+                </ul>
+                <button>Shop Now</button>
+            </section>
+            <section onclick="myFunction3()">
+                <div class="container" id="container3">
+                    <div class="card">
+                        <img class="front" src="img/jeans-front.jpeg">
+                        <img class="back" src="img/jeans-back.jpeg">
+                    </div>
+                </div>
+                <figcaption id="namaProduct3">
+                    Jeans Long Premium
+                </figcaption>
+                <figcaption class="harga" id="harga3">
+                    Rp.300.000
+                </figcaption>
+                <figcaption hidden id="desciption3">
+                    Pesanan sebelum jam 15.00 WIB dikirim dihari yang sama, lewat jam tersebut dikirim keesokan harinya. Hari Minggu libur ya kak, tidak ada pengiriman, tapi tetap menerima order dan akan kami kirim hari Senin. Semua barang dijual dengan kualitas terbaik dengan melewati 'Quality Control' yg ketat. Produk bisa 'Diretur' apabila barang rusak atau robek dengan menyertakan video 'Unboxing' Untuk dropship atau reseller silahkan cantumkan nama dan no handphone agar bisa disesuaikan dengan label pengiriman.
+                </figcaption>
+                <ul id="list3" hidden>
+                    <li>Bahan tebal</li>
+                    <li>Denim</li>
+                    <li>Warna tidak luntur dan tidak pudarn</li>
+                    <li>Jahitan rapi dan kuat</li>
+                </ul>
+                <button>Shop Now</button>
+            </section>
+            <section onclick="myFunction4()">
+                <div class="container" id="container4">
+                    <div class="card">
+                        <img class="front" src="img/vans-front.jpeg">
+                        <img class="back" src="img/vans-back.jpeg">
+                    </div>
+                </div>
+                <figcaption id="namaProduct4">
+                    Vans Old Skool Black White Classic
+                </figcaption>
+                <figcaption class="harga" id="harga4">
+                    Rp. 605.000
+                </figcaption>
+                <figcaption hidden id="desciption4">
+                    Dapatkan gaya klasik yang tak lekang oleh waktu dengan Vans Old Skool Black White Classic Sneakers. Sepatu ini adalah perpaduan sempurna antara desain yang ikonik dan kenyamanan yang luar biasa. Dibangun dengan material berkualitas tinggi, sepatu ini tidak hanya tahan lama tetapi juga memberikan tampilan yang santai dan trendi.
+                </figcaption>
+                <ul id="list4" hidden>
+                    <li>Klasik</li>
+                    <li>Sol Waffle</li>
+                    <li>Bahan berkualitas</li>
+                    <li>Free Paperbag Vans</li>
+                </ul>
+                <button>Shop Now</button>
+            </section>
+        </div>
+        <h3>Trending Today</h3>
+        <div class="trending">
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes1
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes2
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes1
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes2
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+        </div>
+        <h3>Mens Footwear</h3>
+        <div class="mens_footwear">
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes1
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes2
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes1
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+            <section>
+                <img src="icons/shoes.png" width="250px">
+                <figcaption>
+                    Shoes2
+                </figcaption>
+                <figcaption class="harga">
+                    upto 70% off
+                </figcaption>
+                <button>Shop Now</button>
+            </section>
+        </div>
+        <h3></h3>
+        <footer>
+            <div>
+                <h2>About</h2>
+                <p>Contact Us</p>
+                <p>About Us</p>
+                <p>Flipcart Stories</p>
+                <p>Wholesale</p>
+                <p>Our Other Product</p>
+            </div>
+            <div>
+                <h2>Help</h2>
+                <p>Payment</p>
+                <p>Shipping</p>
+                <p>Cash On Delivery</p>
+                <p>Return Policy</p>
+                <p>FAQ</p>
+            </div>
+            <div>
+                <h2>Policy</h2>
+                <p>Return</p>
+                <p>Cancelation</p>
+                <p>Privacy</p>
+                <p>Tems Of Use</p>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+            </div>
+        </footer>
+        <script src="javascript/eksternal.js"></script>
+    </body>
+</html>
