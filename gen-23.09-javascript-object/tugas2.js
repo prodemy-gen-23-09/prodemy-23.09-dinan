@@ -5,9 +5,9 @@ let cars = {
 }
 
 //input User
-let inputProperty = "dsadasdsad"
-let inputOldValue = "suzuki"
-let inputNewValue = "Sport"
+let inputProperty = "merek"
+let inputOldValue = "toyota"
+let inputNewValue = "honda"
 
 if(cars.hasOwnProperty(inputProperty)){
     if(inputProperty == "status"){
