@@ -6,9 +6,8 @@ function App() {
   const vans = new Product(1, "./src/assets/img/vans-front.jpeg", "Vans Old School", "The Old Skool, Vans classic skate shoe", "Rp. 1.090.000")
   const monseur = new Product(2, "./src/assets/img/monseur-front.jpeg", "The Monseur Gallery T-shirt", "The Monseur Gallery Oversize BANSHEES", "Rp. 300.000")
   const jacket = new Product(3, "./src/assets/img/jacket.jpg", "Bikers Leather Jacket", "Features inner pocket & 3M Reflektor", "Rp. 1.000.000")
-  const jacket2 = new Product(4, "./src/assets/img/jacket.jpg", "Bikers Leather Jacket", "Features inner pocket & 3M Reflektor", "Rp. 1.000.000")
 
-  const daftarProduct = [vans, monseur, jacket, jacket2]
+  const daftarProduct = [vans, monseur, jacket]
   return (
     <div className="bg-slate-100 min-h-screen grid items-center justify-center gap-7 p-10">
       <h1 className="font-bold text-3xl text-center">Daftar Product</h1>
