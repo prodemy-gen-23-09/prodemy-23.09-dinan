@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Javascript Asynchronous</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        background-color: #fff8e7;
+      }
+      #input-btn {
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      #inputProduct {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        outline: 0;
+      }
+      #inputProduct:focus {
+        border: 2px solid rgb(184, 140, 83);
+      }
+      #btn-search {
+        background-color: burlywood;
+        padding: 5px;
+      }
+      #btn-search:hover {
+        background-color: rgb(184, 140, 83);
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="input-btn">
+      <input type="text" id="inputProduct" />
+      <button id="btn-search" onclick="search()">Submit</button>
+    </div>
+    <!-- <div id="display-res"></div> -->
+
+    <script>
+      const input = document.getElementById("inputProduct")
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          document.getElementById("btn-search").click()
+        }
+      })
+
+      const search = async () => {
+        try {
+          const value = document.getElementById("inputProduct").value
+          const response = await axios.get(`https://dummyjson.com/products/search?q=${value}`)
+          const data = response.data.products.map((products) => products.title)
+          data.length != 0 ? console.log(data) : console.log("Data tidak ditemukan")
+
+          //   const display = document.getElementById("display-res")
+          //   data?.forEach((product) => {
+          //     const list = document.createElement("div")
+          //     list.textContent = product
+          //     display.appendChild(list)
+          //   })
+        } catch (error) {
+          console.error(error.message)
+        }
+      }
+    </script>
+  </body>
+</html>

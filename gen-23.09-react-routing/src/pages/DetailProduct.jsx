@@ -8,8 +8,8 @@ import { useParams } from "react-router-dom"
 
 const DetailProduct = () => {
   const { id } = useParams()
-  let getProduct2 = Product.filter((p) => p.id == id)
-  let getProduct = getProduct2[0]
+  let getProduct = Product.filter((p) => p.id == id)[0]
+
   const [productImage, setProductImage] = useState(`/${getProduct.urlImg1}`)
 
   const [addSize, setAddSize] = useState("-")
