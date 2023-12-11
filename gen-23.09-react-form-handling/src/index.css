@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inconHover {
+  @apply h-6 w-6 group-hover:stroke-orange-400;
+}
+.anchorHover {
+  @apply font-semibold group-hover:text-orange-400;
+}

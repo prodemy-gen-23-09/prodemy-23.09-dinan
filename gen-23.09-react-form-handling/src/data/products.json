@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mens Wear",
+      "url": "/src/assets/img/categories/mens.png"
+    },
+    {
+      "id": 2,
+      "name": "Womens Wear",
+      "url": "/src/assets/img/categories/womens.png"
+    },
+    {
+      "id": 3,
+      "name": "Kids Wear",
+      "url": "/src/assets/img/categories/kids.png"
+    },
+    {
+      "id": 4,
+      "name": "Electronic",
+      "url": "/src/assets/img/categories/electronics.png"
+    },
+    {
+      "id": 5,
+      "name": "Home Appiliance",
+      "url": "/src/assets/img/categories/home.png"
+    },
+    {
+      "id": 6,
+      "name": "Mobiles",
+      "url": "/src/assets/img/categories/mobiles.png"
+    },
+    {
+      "id": 7,
+      "name": "Beauty Product",
+      "url": "/src/assets/img/categories/beauty.png"
+    }
+  ],
+  "products": [
+    {
+      "name": "Jacket",
+      "image": ["/src/assets/img/product/jacket-front.jpg"],
+      "price": "300000",
+      "size": ["S", "M", "L", "XL"],
+      "categoryId": "1",
+      "stock": "5",
+      "id": 1
+    }
+  ]
+}
