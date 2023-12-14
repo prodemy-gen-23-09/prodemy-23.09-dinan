@@ -1,9 +1,9 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import Button from "./ui/Button"
 import { CartContext } from "../context/CartContext"
 import QuantityInTableCart from "./ui/QuantityInTableCart"
-import { deleteFromCart } from "../store/actions/cartAction"
 import { useDispatch, useSelector } from "react-redux"
+import { deleteFromCart } from "../store/reducers/cartSlice"
 
 const TableCart = ({ data }) => {
   const dispatch = useDispatch()
@@ -21,7 +21,7 @@ const TableCart = ({ data }) => {
       </thead>
       <tbody>
         {data?.map((list) => (
-          <tr key={list?.id} className="border-2">
+          <tr key={list.id} className="border-2">
             <td>
               <div className="flex gap-2 items-center">
                 <img src={list.urlImg1} className="w-44 h-44" />
@@ -37,7 +37,7 @@ const TableCart = ({ data }) => {
               </div>
             </td>
             <td className="text-center">
-              <h1>Rp. {JSON.parse(list.harga * list.quantity).toLocaleString("ID-id")}</h1>
+              <h1>Rp. {list.harga * list.quantity}</h1>
             </td>
             <td>
               <div className="flex justify-center">

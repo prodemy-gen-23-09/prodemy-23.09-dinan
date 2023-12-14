@@ -1,25 +1,16 @@
 import { useEffect, useState } from "react"
 import Button from "./Button"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { changeObject } from "../../store/reducers/cartSlice"
 
 const QuantityInTableCart = ({ quantity, id }) => {
   const [numberQuantity, setNumberQuantity] = useState(quantity)
-  // const { dataCart } = useSelector((state) => state.cart)
-  // const specifyData = dataCart.filter((list) => list.id == id)[0]
-  // const dispatch = useDispatch()
-  // console.log(specifyData)
-  //   const { setDataCart } = useContext(CartContext)
+  const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   specifyData.quantity = numberQuantity
-  //   let payload = [{ ...dataCart, specifyData }]
-  //   console.log(payload)
-  //   // dispatch(payload)
-  // }, [numberQuantity])
-
-  const sendData = (event) => {
-    jumlah(event.target.value)
-  }
+  useEffect(() => {
+    let payload = { id: id, quantity: numberQuantity }
+    dispatch(changeObject(payload))
+  }, [numberQuantity])
 
   return (
     <>
@@ -32,7 +23,7 @@ const QuantityInTableCart = ({ quantity, id }) => {
             setNumberQuantity((n) => n + 1)
           }}
         />
-        <input className="w-10 text-center" type="text" onChange={sendData} value={numberQuantity} />
+        <input className="w-10 text-center" type="text" value={numberQuantity} onChange={() => quantity(numberQuantity)} />
         <Button
           color="hover:bg-orange-200"
           custom="rounded-none w-5 text-sm font-semibold"
