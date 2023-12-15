@@ -1,0 +1,189 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mens Wear",
+      "url": "/src/assets/img/categories/mens.png"
+    },
+    {
+      "id": 2,
+      "name": "Womens Wear",
+      "url": "/src/assets/img/categories/womens.png"
+    },
+    {
+      "id": 3,
+      "name": "Kids Wear",
+      "url": "/src/assets/img/categories/kids.png"
+    },
+    {
+      "id": 4,
+      "name": "Electronic",
+      "url": "/src/assets/img/categories/electronics.png"
+    },
+    {
+      "id": 5,
+      "name": "Home Appiliance",
+      "url": "/src/assets/img/categories/home.png"
+    },
+    {
+      "id": 6,
+      "name": "Mobiles",
+      "url": "/src/assets/img/categories/mobiles.png"
+    },
+    {
+      "id": 7,
+      "name": "Beauty Product",
+      "url": "/src/assets/img/categories/beauty.png"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/vans-front.jpeg",
+      "urlImg2": "/src/assets/img/product/vans-back.jpeg",
+      "name": "Vans Old School",
+      "harga": 1090000,
+      "size": [42, 43, 44, 45],
+      "desc": "Dapatkan gaya klasik yang tak lekang oleh waktu dengan Vans Old Skool Black White Classic Sneakers. Sepatu ini adalah perpaduan sempurna antara desain yang ikonik dan kenyamanan yang luar biasa. Dibangun dengan material berkualitas tinggi, sepatu ini tidak hanya tahan lama tetapi juga memberikan tampilan yang santai dan trendi.",
+      "date": "January 4, 2023"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/monseur-front.jpeg",
+      "urlImg2": "/src/assets/img/product/monseur-back.jpeg",
+      "name": "The Monseur Gallery T-shirt",
+      "harga": 200000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "TE MONSEUR GALLERY (TMG) adalah merek desain independen yang berkomitmen pada desain dan pengembangan kelompok muda. Sambil membantu konsumen untuk lebih membentuk citra kepribadian mode, itu menyampaikan sikap tren anak muda yang beragam, tidak membabi buta mengikuti, dan aktif dan mandiri, menunjukkan tren mode yang menarik dan avant-garde.",
+      "date": "December 2, 2023"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/jacket-front.jpg",
+      "urlImg2": "/src/assets/img/product/jacket-back.jpg",
+      "name": "Jacket",
+      "harga": 300000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Tampil stylish dengan kehangatan yang tak tertandingi. Jacket ini tidak hanya memberikan fashion statement, tetapi juga perlindungan maksimal dari angin saat mengendarai motor. Temukan gayamu dan riding dengan jaket ini!",
+      "date": "December 1, 2023"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/dcSendal-front.jpg",
+      "urlImg2": "/src/assets/img/product/dcSendal-back.jpg",
+      "name": "DC Sendal",
+      "harga": 450000,
+      "size": [42, 43, 44, 45],
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti laudantium consequuntur iure veritatis, nisi excepturi magni maxime repudiandae? Debitis, quidem, quisquam nobis eos impedit, deleniti facilis similique porro quas hic nemo veniam. Ut aut at suscipit eaque asperiores quibusdam molestiae laborum nemo quisquam rem est corrupti, vel quas, incidunt ipsam, facere voluptates eligendi! Ex quod sit itaque quae accusamus odio aspernatur quibusdam deserunt repellendus aperiam recusandae dolore asperiores nostrum labore, nihil hic. Natus hic veniam laudantium molestiae quia commodi! Totam adipisci et, doloribus commodi debitis ea quaerat iusto, tempora non, autem blanditiis. Accusantium, provident ex! Natus minus sed fugiat minima.",
+      "date": "January 9, 2023"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/dcSepatu-front.jpg",
+      "urlImg2": "/src/assets/img/product/dcSepatu-back.jpg",
+      "name": "DC Shoes",
+      "harga": 900000,
+      "size": [42, 43, 44, 45],
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti laudantium consequuntur iure veritatis, nisi excepturi magni maxime repudiandae? Debitis, quidem, quisquam nobis eos impedit, deleniti facilis similique porro quas hic nemo veniam. Ut aut at suscipit eaque asperiores quibusdam molestiae laborum nemo quisquam rem est corrupti, vel quas, incidunt ipsam, facere voluptates eligendi! Ex quod sit itaque quae accusamus odio aspernatur quibusdam deserunt repellendus aperiam recusandae dolore asperiores nostrum labore, nihil hic. Natus hic veniam laudantium molestiae quia commodi! Totam adipisci et, doloribus commodi debitis ea quaerat iusto, tempora non, autem blanditiis. Accusantium, provident ex! Natus minus sed fugiat minima.",
+      "date": "November 13, 2023"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/dreamTheater-front.jpg",
+      "urlImg2": "/src/assets/img/product/dreamTheater-back.jpg",
+      "name": "Dream Thater T-shirt",
+      "harga": 400000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Official Dream Theater T-shirt from UK. Kaos bahan Cotton Combed 30s Reaktif bahan langsung terasa adem begitu dipakai dan ga panas lebih tipis dibanding 20s/24s. Cocok digunakan di iklim tropis seperti Indonesia.",
+      "date": "February 2, 2023"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/flanel-front.jpg",
+      "urlImg2": "/src/assets/img/product/flanel-back.jpg",
+      "name": "Flanel",
+      "harga": 300000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti laudantium consequuntur iure veritatis, nisi excepturi magni maxime repudiandae? Debitis, quidem, quisquam nobis eos impedit, deleniti facilis similique porro quas hic nemo veniam. Ut aut at suscipit eaque asperiores quibusdam molestiae laborum nemo quisquam rem est corrupti, vel quas, incidunt ipsam, facere voluptates eligendi! Ex quod sit itaque quae accusamus odio aspernatur quibusdam deserunt repellendus aperiam recusandae dolore asperiores nostrum labore, nihil hic. Natus hic veniam laudantium molestiae quia commodi! Totam adipisci et, doloribus commodi debitis ea quaerat iusto, tempora non, autem blanditiis. Accusantium, provident ex! Natus minus sed fugiat minima.",
+      "date": "March 15, 2023"
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/hoodie-front.jpg",
+      "urlImg2": "/src/assets/img/product/hoodie-back.jpg",
+      "name": "Hoodie Troops",
+      "harga": 400000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti laudantium consequuntur iure veritatis, nisi excepturi magni maxime repudiandae? Debitis, quidem, quisquam nobis eos impedit, deleniti facilis similique porro quas hic nemo veniam. Ut aut at suscipit eaque asperiores quibusdam molestiae laborum nemo quisquam rem est corrupti, vel quas, incidunt ipsam, facere voluptates eligendi! Ex quod sit itaque quae accusamus odio aspernatur quibusdam deserunt repellendus aperiam recusandae dolore asperiores nostrum labore, nihil hic. Natus hic veniam laudantium molestiae quia commodi! Totam adipisci et, doloribus commodi debitis ea quaerat iusto, tempora non, autem blanditiis. Accusantium, provident ex! Natus minus sed fugiat minima.",
+      "date": "April 17, 2023"
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/jeans-front.jpeg",
+      "urlImg2": "/src/assets/img/product/jeans-back.jpeg",
+      "name": "Jeans",
+      "harga": 420000,
+      "size": [22, 23, 24, 25],
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quis sed et a fugiat odio deserunt enim. Nostrum ullam recusandae quibusdam dolores corrupti accusantium quo consequatur velit laboriosam provident quasi dolor eligendi sed, suscipit dicta voluptatem amet aut, facere reprehenderit culpa. Deleniti voluptates molestias temporibus maxime accusamus, nemo incidunt commodi beatae est quod ipsam, rem magni mollitia. Suscipit perferendis error, id culpa earum vitae dolorem delectus saepe sequi repellendus ullam!",
+      "date": "May 5, 2023"
+    },
+    {
+      "id": 10,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/screamous-front.jpg",
+      "urlImg2": "/src/assets/img/product/screamous-back.jpg",
+      "name": "Screamous T-shirt",
+      "harga": 220000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quis sed et a fugiat odio deserunt enim. Nostrum ullam recusandae quibusdam dolores corrupti accusantium quo consequatur velit laboriosam provident quasi dolor eligendi sed, suscipit dicta voluptatem amet aut, facere reprehenderit culpa. Deleniti voluptates molestias temporibus maxime accusamus, nemo incidunt commodi beatae est quod ipsam, rem magni mollitia. Suscipit perferendis error, id culpa earum vitae dolorem delectus saepe sequi repellendus ullam!",
+      "date": "May 17, 2023"
+    },
+    {
+      "id": 11,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/trucker-front.jpg",
+      "urlImg2": "/src/assets/img/product/trucker-back.jpg",
+      "name": "Trucker T-shirt",
+      "harga": 200000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quis sed et a fugiat odio deserunt enim. Nostrum ullam recusandae quibusdam dolores corrupti accusantium quo consequatur velit laboriosam provident quasi dolor eligendi sed, suscipit dicta voluptatem amet aut, facere reprehenderit culpa. Deleniti voluptates molestias temporibus maxime accusamus, nemo incidunt commodi beatae est quod ipsam, rem magni mollitia. Suscipit perferendis error, id culpa earum vitae dolorem delectus saepe sequi repellendus ullam!",
+      "date": "august 5, 2023"
+    },
+    {
+      "id": 12,
+      "categoryId": 1,
+      "urlImg1": "/src/assets/img/product/kemeja-front.jpg",
+      "urlImg2": "/src/assets/img/product/kemeja-back.jpg",
+      "name": "Kemeja",
+      "harga": 300000,
+      "size": ["S", "M", "L", "XL"],
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quis sed et a fugiat odio deserunt enim. Nostrum ullam recusandae quibusdam dolores corrupti accusantium quo consequatur velit laboriosam provident quasi dolor eligendi sed, suscipit dicta voluptatem amet aut, facere reprehenderit culpa. Deleniti voluptates molestias temporibus maxime accusamus, nemo incidunt commodi beatae est quod ipsam, rem magni mollitia. Suscipit perferendis error, id culpa earum vitae dolorem delectus saepe sequi repellendus ullam!",
+      "date": "March 5, 2023"
+    }
+  ],
+  "users": [
+    {
+      "email": "dinanachmad@gmail.com",
+      "password": "$2a$10$uGomf0toxz4/9k/23j4L7eAxu4k1hwa1czo.hX9PHaziBgapoX05S",
+      "name": "dinanachmad",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "fauzan@gmail.com",
+      "password": "$2a$10$/YrJw0lGqCcqJIWhk52wVuhVpyO7m3Lj.TUftk.JrYfT1I0xhUZ6C",
+      "name": "fauzan",
+      "role": "customer",
+      "id": 2
+    }
+  ]
+}
