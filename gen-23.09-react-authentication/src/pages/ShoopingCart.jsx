@@ -5,7 +5,6 @@ import { useSelector } from "react-redux"
 const ShoopingCart = () => {
   // const { dataCart } = useContext(CartContext)
   const { dataCart } = useSelector((state) => state.cart)
-  console.log(dataCart)
 
   return (
     <div className="flex flex-col gap-3 items-center">

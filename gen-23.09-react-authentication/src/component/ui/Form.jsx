@@ -5,11 +5,9 @@ import axios from "axios"
 import useSWR from "swr"
 import { DotLoader } from "react-spinners"
 import Button from "./Button"
-import { useState } from "react"
+import { formatDate } from "../../utils/formatDate"
 
-const Form = ({ typeSubmit, getId, dataProduct }) => {
-  //   const [selectedImage, setSelectedImage] = useState([])
-
+const Form = ({ text, typeSubmit, dataProduct }) => {
   const getCategory = (url) => axios.get(url).then((response) => response.data)
   const { data, isLoading, error } = useSWR(" http://localhost:3000/categories", getCategory)
   if (error) {
@@ -17,10 +15,12 @@ const Form = ({ typeSubmit, getId, dataProduct }) => {
   }
 
   const schema = yup.object().shape({
-    name: yup.string().required("nama product is required"),
-    harga: yup.number().typeError("harga product is required"),
-    stock: yup.number().typeError("stock product is required"),
-    size: yup.string().required("size product is required"),
+    name: yup.string().required("Name product is required"),
+    image: yup.string().required("Image product is required"),
+    harga: yup.number().typeError("Price product is required"),
+    size: yup.string().required("Size product is required"),
+    category: yup.string().required("Category product is required"),
+    stock: yup.number().typeError("Stock product is required"),
   })
 
   const {
@@ -30,60 +30,104 @@ const Form = ({ typeSubmit, getId, dataProduct }) => {
     reset,
   } = useForm({ resolver: yupResolver(schema) })
 
-  // let dataProductSpecific
-  // if (dataProduct != null) {
-  //   dataProductSpecific = dataProduct.filter((list) => list.id == getId)[0]
-  // }
+  const onSubmitNewData = (data) => {
+    const payload = {
+      name: data.name,
+      image: [data.image],
+      harga: data.harga,
+      size: data.size.split(" "),
+      categoryId: data.category,
+      stock: data.stock,
+      date: formatDate(new Date()),
+      desc: data.desc,
+    }
 
-  // console.log(dataProductSpecific.name)
+    axios
+      .post("http://localhost:3000/products", payload)
+      .then(() => {
+        alert("Successfully add product!")
+        reset()
+      })
+      .catch((error) => console.log(error))
+  }
+
+  const onUpdateData = (data) => {
+    console.log(data)
+    const payload = {
+      name: data.name,
+      image: [data.image],
+      harga: data.harga,
+      size: data.size.split(","),
+      categoryId: data.category,
+      stock: data.stock,
+      date: dataProduct.date,
+      desc: dataProduct.desc,
+    }
+
+    axios
+      .put(`http://localhost:3000/products/${dataProduct.id}`, payload)
+      .then(() => {
+        alert("Successfully add product!")
+      })
+      .catch((error) => console.log(error))
+  }
 
   return (
-    <form id={getId} onSubmit={handleSubmit(typeSubmit)} className="flex flex-col gap-3 p-3">
-      <div className="flex flex-col">
-        <label htmlFor="name">Name</label>
-        <input defaultValue={dataProduct?.name} type="text" placeholder="Name" className="border-2 border-gray-200 focus:outline-sky-200" {...register("name")} id="name" />
-        <p className="error">{errors.name?.message}</p>
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="image">Image</label>
-        <input defaultValue={dataProduct?.image} type="text" placeholder="Image" className="border-2 border-gray-200 focus:outline-sky-200" {...register("image")} id="image" />
-        <p className="error">{errors.image?.message}</p>
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="price">Price</label>
-        <input defaultValue={dataProduct?.price} type="text" placeholder="Price" className="border-2 border-gray-200 focus:outline-sky-200" {...register("price")} id="price" />
-        <p className="error">{errors.price?.message}</p>
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="size">Size</label>
-        <input defaultValue={dataProduct?.size} type="text" placeholder="size" className="border-2 border-gray-200 focus:outline-sky-200" {...register("size")} id="size" />
-        <p className="error">{errors.size?.message}</p>
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="category">Category</label>
-        {isLoading ? (
-          <DotLoader />
-        ) : (
-          <>
-            <select defaultValue={dataProduct?.categoryId} placeholder="Category" className="border-[1px] border-gray-300 text-gray-700" {...register("category")}>
-              <option value="">Please select</option>
-              {data.map((list) => (
-                <option key={list.id} value={list.id}>
-                  {list.name}
-                </option>
-              ))}
-            </select>
-          </>
-        )}
-        <p className="error">{errors.category?.message}</p>
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="stock">Stock</label>
-        <input type="text" placeholder="Stock" defaultValue={dataProduct?.stock} className="border-2 border-gray-200 focus:outline-sky-200" {...register("stock")} id="stock" />
-        <p className="error">{errors.stock?.message}</p>
-      </div>
-      <Button type="submit" text="Submit" />
-    </form>
+    <>
+      <h1 className="text-lg font-semibold text-center">{text}</h1>
+      <form onSubmit={handleSubmit(eval(typeSubmit))} className="flex flex-col gap-3 p-3">
+        <div className="flex flex-col">
+          <label htmlFor="name" className="text-sm">
+            Name
+          </label>
+          <input defaultValue={dataProduct?.name} type="text" placeholder="Name" className="inputForm" {...register("name")} id="name" />
+          <p className="text-xs text-red-500">{errors.name?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="image">Image</label>
+          <input defaultValue={dataProduct?.image[0]} type="text" placeholder="Image" className="inputForm" {...register("image")} id="image" />
+          <p className="text-xs text-red-500">{errors.image?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="harga">Price</label>
+          <input defaultValue={dataProduct?.harga} type="text" placeholder="Price" className="inputForm" {...register("harga")} id="harga" />
+          <p className="text-xs text-red-500">{errors.harga?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="size">Size</label>
+          <input defaultValue={dataProduct?.size} type="text" placeholder="size" className="inputForm" {...register("size")} id="size" />
+          <p className="text-xs text-red-500">{errors.size?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="category">Category</label>
+          {isLoading ? (
+            <DotLoader />
+          ) : (
+            <>
+              <select defaultValue={dataProduct?.categoryId} placeholder="Category" className="inputForm" {...register("category")}>
+                <option value="">Please select</option>
+                {data.map((list) => (
+                  <option key={list.id} value={list.id}>
+                    {list.name}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
+          <p className="text-xs text-red-500">{errors.category?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="stock">Stock</label>
+          <input type="text" placeholder="Stock" defaultValue={dataProduct?.stock} className="inputForm" {...register("stock")} id="stock" />
+          <p className="text-xs text-red-500">{errors.stock?.message}</p>
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="message">Description</label>
+          <textarea defaultValue={dataProduct?.desc} id="desc" rows="2" className="inputForm" placeholder="Write your thoughts here..." {...register("desc")}></textarea>
+        </div>
+        <Button type="submit" text="Submit" />
+      </form>
+    </>
   )
 }
 

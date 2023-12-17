@@ -12,7 +12,6 @@ const Header = () => {
 
   const onClickLogout = () => {
     dispatch(resetAuthData())
-    navigate("/login")
   }
 
   return (

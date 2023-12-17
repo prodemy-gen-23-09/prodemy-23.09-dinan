@@ -4,11 +4,11 @@ import Button from "../component/ui/Button"
 // import SearchBar from "../component/ui/SeacrhBar"
 import axios from "axios"
 import useSWR from "swr"
-import { PacmanLoader } from "react-spinners"
+import { DotLoader } from "react-spinners"
 import { useEffect, useState } from "react"
 
 const ListProduct = () => {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState()
 
   const getProduct = (url) => axios.get(url).then((response) => response.data)
   const { data, isLoading, error } = useSWR("http://localhost:3000/products", getProduct, {
@@ -20,9 +20,7 @@ const ListProduct = () => {
     console.log(error)
   }
 
-  // if (products.length == 0) {
-  //   setProducts(data)
-  // }
+  useEffect(() => {}, [products])
 
   const onClickSortData = (sortType, data) => {
     if (sortType == "ascPrice") {
@@ -32,10 +30,10 @@ const ListProduct = () => {
       setProducts([...data].sort((x, y) => y.harga - x.harga))
       console.log(data.map((a) => a.harga))
     } else if (sortType == "oldestDate") {
-      data.sort((x, y) => new Date(x.date) - new Date(y.date))
+      setProducts([...data].sort((x, y) => new Date(x.date) - new Date(y.date)))
       console.log(data.map((a) => a.data))
     } else if (sortType == "latestDate") {
-      data.sort((x, y) => new Date(y.date) - new Date(x.date))
+      setProducts([...data].sort((x, y) => new Date(y.date) - new Date(x.date)))
       console.log(data.map((a) => a.data))
     }
   }
@@ -69,9 +67,9 @@ const ListProduct = () => {
         </div>
         <div className="grid grid-cols-4 justify-items-center gap-y-10">
           {isLoading ? (
-            <PacmanLoader />
+            <DotLoader color="orange" />
           ) : (
-            products.map((list) => <CardProduct key={list.id} urlFront={list.urlImg1} urlBack={list.urlImg2} namaProduct={list.name} harga={list.harga} date={list.date} id={list.id} />)
+            products?.map((list) => <CardProduct key={list.id} urlFront={list.image[0]} urlBack={list.urlImg2} namaProduct={list.name} harga={list.harga} date={list.date} id={list.id} />)
           )}
         </div>
       </div>
