@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.anchorHover {
+  @apply font-semibold group-hover:text-orange-400;
+}
+
+.inconHover {
+  @apply h-6 w-6 group-hover:stroke-orange-400;
+}
+
+.imgDetailProdict {
+  @apply w-20 border-2 transition duration-150 ease-out hover:ease-in hover:scale-125;
+}
+
+.inputForm {
+  @apply text-sm border-[1px] p-1 rounded-md border-gray-200 focus:outline-orange-300;
+}
+
+.textArea {
+  @apply text-xs border-[1px] p-1 rounded-md border-gray-200 focus:outline-orange-300;
+}
